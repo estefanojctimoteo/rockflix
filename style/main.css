@@ -1,0 +1,157 @@
+:root {
+  --red:#E50914;
+  --black:#141414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+  font-family: 'Arial', Times, serif;
+  color: white;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width:700px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+  }  
+}
+
+header .logo {
+  margin-left: 5px;
+  color: var(--red);
+  font-family: 'Arial Black', Times;
+  font-size: 40px;
+}
+
+header nav a {
+  text-decoration: none;
+  color:#aaa;
+  margin-right: 10px;
+}
+
+header nav a:hover {
+  color:#fff;
+}
+
+.main-movie {
+  height: 415px;
+  background: linear-gradient(rgba(0,0,0,.30), rgba(0,0,0,.30)100%), url('/img/main.jpg') center center;
+  background-size: contain;
+  background-repeat: no-repeat;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  margin-left: 20px;
+}
+
+.main-movie .container {
+  width: 70%;
+}
+
+.main-movie .container .title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  margin-top: 15%;
+}
+
+.main-movie .container .description {
+  font-size: 1rem;
+  margin: 10px 0 40px;
+}
+
+@media screen and (min-width:900px){
+  .main-movie .container .description {
+    width: 50%;
+  }
+}
+
+.main-movie .container .buttons a {
+  text-decoration: none;
+  border: none;
+  padding: 20px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: .3s ease all;
+  min-width: 220px;
+  max-width: 250px;
+}
+
+@media screen and (max-width:700px) {
+  .main-movie .container .buttons {
+    display: flex;
+    flex-direction: column;        
+  }  
+  .main-movie .container .buttons a {
+    margin-top: 15px;
+  }  
+}
+
+.watch-now {
+  background-color: white;
+  color: black;
+}
+
+.watch-now:hover {
+  background-color: rgba(90, 159, 224, 0.2);
+  color: white;
+}
+
+.main-movie .container .buttons a:hover {
+  text-decoration: none;
+  border: none;
+  padding: 20px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.more-info {
+  background-color: rgba(0,0,0,.35);
+  color: white;
+}
+
+.more-info:hover {
+  background-color: rgba(90, 159, 224, 0.2);
+  color: white;
+}
+
+.movie-button i {
+  margin-right: 5px;
+}
+
+.carousel-movies {
+  margin-top: 5px;
+  align-items: center;
+}
+
+.carousel {
+  box-shadow: 2px 2px 4px black;
+  overflow: hidden;
+  height: 500px;
+  width: 500px;  
+}
+
+.box-movie {
+  height: 100%;
+  width:100%;
+  display: block;
+}
